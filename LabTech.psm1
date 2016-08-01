@@ -319,7 +319,7 @@ Function Uninstall-LTService{
         Write-Output "Starting uninstall."
         New-PSDrive HKU Registry HKEY_USERS -ErrorAction SilentlyContinue | Out-Null
         $regs = @('HKLM:\Software\LabTech',
-          'HKLM:\Software\Wow6432Node\LabTech',
+          'Registry::HKEY_LOCAL_MACHINE\Software\Wow6432Node\LabTech',
           'Registry::HKEY_CLASSES_ROOT\Installer\Dependencies\{3426921d-9ad5-4237-9145-f15dee7e3004}',
           'Registry::HKEY_CLASSES_ROOT\Installer\Dependencies\{3F460D4C-D217-46B4-80B6-B5ED50BD7CF5}',
           'Registry::HKEY_CLASSES_ROOT\Installer\Products\C4D064F3712D4B64086B5BDE05DBC75F',
